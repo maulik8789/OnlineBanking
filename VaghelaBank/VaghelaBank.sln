@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaghelaBank", "VaghelaBank\VaghelaBank.csproj", "{592F31D8-5F85-4063-B2E5-686D7711E74C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaghelaBank.Tests", "VaghelaBank.Tests\VaghelaBank.Tests.csproj", "{32D2D821-694A-45E0-A3E3-CE7674EB1DD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{592F31D8-5F85-4063-B2E5-686D7711E74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592F31D8-5F85-4063-B2E5-686D7711E74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592F31D8-5F85-4063-B2E5-686D7711E74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592F31D8-5F85-4063-B2E5-686D7711E74C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32D2D821-694A-45E0-A3E3-CE7674EB1DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D2D821-694A-45E0-A3E3-CE7674EB1DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D2D821-694A-45E0-A3E3-CE7674EB1DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D2D821-694A-45E0-A3E3-CE7674EB1DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
