@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VaghelaBank.Models;
 
 namespace VaghelaBank.Controllers
 {
@@ -23,6 +24,13 @@ namespace VaghelaBank.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult CheckingAccount()
+        {
+            ViewBag.Message = "Your Checking Account.";
 
             return View();
         }

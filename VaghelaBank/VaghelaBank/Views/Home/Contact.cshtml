@@ -2,16 +2,77 @@
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
+   1001 Main Street West<br />
+    Hamilton, On. L8S1A9<br />
     <abbr title="Phone">P:</abbr>
-    425.555.0100
+    xxx-xxx-xxxx
 </address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<script>
+    function myFunction() {
+        var inpObj1 = document.getElementById("id1");
+        if (inpObj1.checkValidity() == false) {
+            document.getElementById("demo1").innerHTML = "First Name Required!";
+        }
+        var inpObj2 = document.getElementById("id2");
+        if (inpObj1.checkValidity() == false) {
+            document.getElementById("demo2").innerHTML = "Last Name Required!";
+        }
+        var inpObj3 = document.getElementById("id3");
+        if (inpObj1.checkValidity() == false) {
+            document.getElementById("demo3").innerHTML = "Email address is Required!";
+        }
+        var inpObj4 = document.getElementById("id4");
+        if (inpObj1.checkValidity() == false) {
+            document.getElementById("demo4").innerHTML = "Please, Provide us a Message!";
+        }
+    }
+</script>
+
+<!------------------------Feedback Form Starts----------------------------------------------------------->
+<form name="Feedback"; style="border:solid; width:500px;">
+    <table style="background-image: url('../../Content/GettyImages-185002046-5772f4153df78cb62ce1ad69.jpg');">
+        <tbody>
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <input id="id1" type="text" required style="margin-bottom:5px;">
+                    <p id="demo1" style="color:red"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <input id="id2" type="text">
+                    <p id="demo2" style="color:red"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input id="id3" type="email" required>
+                    <p id="demo3" style="color:red"></p>
+                <td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td>
+                    <input id="id4" type="text" style="width:300px; height:200px" required>
+                    <p id="demo4" style="color:red"></p>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="myFunction()">Submit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<!--------------------------------------------Feedback Form Ends--------------------------------------------------------------------------->        
+        <!--<address>
+            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        </address>-->
