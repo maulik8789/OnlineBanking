@@ -9,7 +9,9 @@ namespace VaghelaBank.Models
 {
     public class CheckingAccount
     {
-        public int AccountNumber { get; set; }
+        public int ID { get; set; }
+        [Required]
+        public string AccountNumber { get; set; }
 
         [Required]
         public string FirstName { get; set; }
@@ -18,5 +20,8 @@ namespace VaghelaBank.Models
         public string LastName { get; set; }
 
         public decimal Balance { get; set; }
+
+        public ApplicationUser MyProperty { get; set; }
+        public string ApplicationId { get; set; }
     }
 }
