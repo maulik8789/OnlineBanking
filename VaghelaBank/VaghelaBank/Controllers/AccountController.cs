@@ -151,10 +151,16 @@ namespace VaghelaBank.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var db = new ApplicationDbContext();
+                    var accNumber = "4321" + (db.CheckingAccounts.Count() + 1).ToString().PadLeft(10, '0');
+                    var account = new CheckingAccount { AccountNumber = accNumber, FirstName = model.FirstName, LastName = model.LastName, Balance = 0, ApplicationId = user.Id };
+                    db.CheckingAccounts.Add(account);
+                    db.SaveChanges();
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
